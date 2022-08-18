@@ -11,23 +11,23 @@ import { useAppDispatch } from './store/hooks';
 import { getAllCountries } from './store/countrySlice';
 
 export const App: React.FC = () => {
-	const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
 
-	useEffect(() => {
-		dispatch(getAllCountries());
-		//eslint-disable-next-line
-	}, []);
+  useEffect(() => {
+    dispatch(getAllCountries());
+    //eslint-disable-next-line
+  }, []);
 
-	return (
-		<>
-			<Header></Header>
-			<Main>
-				<Routes>
-					<Route path='/' element={<HomePage />} />
-					<Route path='/country/:name' element={<Details />} />
-					<Route path='*' element={<NotFound />} />
-				</Routes>
-			</Main>
-		</>
-	);
+  return (
+    <>
+      <Header></Header>
+      <Main>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/country/:name' element={<Details />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </Main>
+    </>
+  );
 };
