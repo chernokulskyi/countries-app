@@ -56,6 +56,8 @@ const STitle = styled(Link).attrs({ to: '/' })`
 `;
 
 const SModeSwitcher = styled.div`
+  display: flex;
+  align-items: center;
   color: var(--colors-text);
   font-size: var(--fs-sm);
   font-weight: var(--fw-bold);
